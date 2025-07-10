@@ -46,7 +46,10 @@ jobs:
     #if: false
     runs-on: ubuntu-latest
     container:
-      image: ha4606/hayk-dcs-test:dcs-ubuntu-20250703.1
+      image: ghcr.io/haykarutyunyan-jpl/dcs-ubuntu-20250703.1:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -62,7 +65,10 @@ jobs:
   dcs_build_rocky:
     runs-on: ubuntu-latest
     container:
-      image: ha4606/hayk-dcs-test:dcs-rocky-9-20250703.1
+      image: ghcr.io/haykarutyunyan-jpl/dcs-rocky-9-20250703.1:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
