@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [main, dev]
 
+permissions:
+  packages: read
+
 jobs:
   # DCS build test
   # dcs_build:
